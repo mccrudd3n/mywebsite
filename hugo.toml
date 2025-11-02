@@ -2,6 +2,10 @@ baseURL = 'https://lostuser.github.io/mywebsite/'
 languageCode = 'en-us'
 title = 'My Website'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [menu]
   [[menu.main]]
     name = 'Home'
