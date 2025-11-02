@@ -1,10 +1,10 @@
-baseURL = 'https://github.com/mccrudd3n/mywebsite'
+baseURL = 'https://mccrudd3n.github.io/mywebsite/'
 languageCode = 'en-us'
-title = 'My Website'
+title = 'Home'
 
 [params]
   profileName = 'John McCrudden'
-  profileTagline = 'Run after your obsessions with everything you have; Just be sure to take notes along the way"'
+  profileTagline = 'Running after my obsessions with everything I have; whilst taking notes. Do mind my spelling'
   profilePhoto = 'images/profile-placeholder.svg'
   profileLinkedIn = 'https://www.linkedin.com/in/'
 

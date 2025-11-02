@@ -9,10 +9,10 @@
       {{- $menu := .Site.Menus.main -}}
       {{- if $menu -}}
         {{- range $menu }}
-          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
         {{- end -}}
       {{- else -}}
-        <li><a href="{{ "/" | relURL }}">Home</a></li>
+        <li><a href="{{ "/" | relLangURL }}">Home</a></li>
       {{- end -}}
     </ul>
   </article>

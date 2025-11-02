@@ -116,6 +116,141 @@
         font-size: 2.2rem;
         margin-top: 0;
       }
+      .hero {
+        margin-bottom: 2.5rem;
+      }
+      .hero .lede {
+        font-size: 1.1rem;
+        color: #374151;
+        margin-bottom: 1rem;
+      }
+      .hero-body p {
+        margin-bottom: 1rem;
+      }
+      .article-header {
+        display: grid;
+        gap: 1.25rem;
+      }
+      .article-header .article-hero {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        min-height: 260px;
+        background: #0f172a;
+        color: #f8fafc;
+      }
+      .article-header .article-hero .cover-media {
+        position: absolute;
+        inset: 0;
+      }
+      .article-header .article-hero .cover-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(0.55) saturate(1.1);
+      }
+      .article-header .article-hero .cover-text {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: clamp(1.25rem, 4vw, 2.5rem);
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.75) 60%, rgba(15, 23, 42, 0.98) 100%);
+        display: grid;
+        gap: 0.75rem;
+      }
+      .article-header .article-hero h1 {
+        margin: 0;
+        font-size: clamp(1.9rem, 3vw, 3rem);
+        line-height: 1.1;
+      }
+      .article-header .article-hero .article-subtitle {
+        margin: 0;
+        font-size: 1.05rem;
+        color: rgba(248, 250, 252, 0.85);
+      }
+      .article-header .article-hero .caption {
+        margin: 0;
+        font-size: 0.85rem;
+        color: rgba(248, 250, 252, 0.75);
+      }
+      .article-header .article-hero .caption .credit {
+        font-style: italic;
+      }
+      .article-header .back-link {
+        margin: 0;
+      }
+
+      .status-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-bottom: 2.5rem;
+      }
+      .status-card {
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+      }
+      .status-card h2 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+      }
+      .status-card .status-title {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .status-card .status-meta {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-bottom: 0.75rem;
+      }
+      .overview-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+      }
+      .section-grid {
+        display: grid;
+        gap: 1.75rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .section-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 1.5rem;
+        background: #ffffff;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+      }
+      .section-card header h2 {
+        margin: 0 0 0.35rem;
+        font-size: 1.25rem;
+      }
+      .section-card header p {
+        margin: 0 0 1rem;
+        color: #4b5563;
+        font-size: 0.95rem;
+      }
+      .section-card ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.6rem;
+      }
+      .section-card li {
+        font-size: 0.97rem;
+      }
+      .section-card li small {
+        color: #6b7280;
+        font-size: 0.85rem;
+      }
+
       footer.site-footer {
         margin-top: 4rem;
         padding: 2rem 0 0;
@@ -165,8 +300,8 @@
         {{ $profileTagline := .Site.Params.profileTagline | default "Building, learning, and sharing progress in public." }}
         {{ $linkedin := .Site.Params.profileLinkedIn | default "https://www.linkedin.com/in/your-handle" }}
         <div class="profile">
-          <img src="{{ $profilePath | relURL }}" alt="{{ $profileName }}" />
-          <h1>{{ $profileName }}</h1>
+          <!-- <img src="{{ $profilePath | relLangURL }}" alt="{{ $profileName }}" />
+          <h1>{{ $profileName }}</h1> -->
           <p>{{ $profileTagline }}</p>
         </div>
         <nav class="primary" aria-label="Primary navigation">
@@ -175,7 +310,13 @@
             {{- $menu := .Site.Menus.main -}}
             {{- if $menu -}}
               {{- range $menu }}
-                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                {{- $link := "" -}}
+                {{- if .Page -}}
+                  {{- $link = .Page.RelPermalink -}}
+                {{- else -}}
+                  {{- $link = .URL -}}
+                {{- end -}}
+                <li><a href="{{ $link }}">{{ .Name }}</a></li>
               {{- end -}}
             {{- else -}}
               {{- range .Site.Sections }}
@@ -184,11 +325,6 @@
             {{- end -}}
           </ul>
         </nav>
-        <div class="external-links">
-          <strong>Quick Links</strong>
-          <a href="{{ $linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="{{ "/links/" | relURL }}">More links &amp; resources →</a>
-        </div>
       </aside>
       <main id="top">
         <div class="content-inner">
@@ -198,14 +334,20 @@
               {{- $menu := .Site.Menus.main -}}
               {{- if $menu -}}
                 {{- range $menu }}
-                  <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                  {{- $link := "" -}}
+                  {{- if .Page -}}
+                    {{- $link = .Page.RelPermalink -}}
+                  {{- else -}}
+                    {{- $link = .URL -}}
+                  {{- end -}}
+                  <a href="{{ $link }}">{{ .Name }}</a>
                 {{- end -}}
               {{- end -}}
             </div>
             <div class="footer-meta">
               <span>© {{ now.Format "2006" }} {{ .Site.Title }}</span>
               <span>·</span>
-              <a href="{{ "/" | relURL }}">Back to Home</a>
+              <a href="{{ "/" | relLangURL }}">Back to Home</a>
             </div>
           </footer>
         </div>
