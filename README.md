@@ -1,48 +1,71 @@
 # My Website
 
-Personal portfolio site to showcase professional work, certifications, and long-form writing. The project aims to become a GitHub-hosted website with automated deployments and structured content management for easy updates.
+Obsidian-authored, Hugo-powered portfolio that highlights projects, certifications, active learning, and a running journal.
 
-## Objectives
-- Present an overview of my background, skills, and current focus.
-- Highlight selected projects with rich descriptions, media, and source links.
-- Catalogue certifications with metadata (issuer, issue date, verification links).
-- Publish blog posts with tagging, RSS feed support, and social sharing previews.
-- Automate builds and deployments from GitHub to static hosting.
+<p id="top" align="center">
+  <a href="#overview">Overview</a> ·
+  <a href="#content-map">Content Map</a> ·
+  <a href="#docs--automation">Docs &amp; Automation</a> ·
+  <a href="#workflow">Workflow</a>
+</p>
 
-## Initial Feature Plan
-1. **Foundational Layout** – Global navigation, responsive layout system, and landing page hero.
-2. **Projects Section** – Cards with filtering, project detail pages, and GitHub integration.
-3. **Certifications Section** – Timeline or grid view with credential details and verification links.
-4. **Blog** – Markdown-driven posts, tagging, search, and RSS feed.
-5. **Contact & Social** – Contact form or mailto link, plus social network badges.
-6. **CI/CD Pipeline** – Automated tests, linting, and deploy workflow via GitHub Actions.
+## Overview
+- Showcase professional work with rich case studies and source links.
+- Surface current certifications and verification details at a glance.
+- Publish long-form articles and short daily journal updates from Obsidian.
+- Track ongoing learning goals alongside deployed project updates.
+- Automate publishing through Hugo builds and GitHub Actions deployments.
 
-## Proposed Tech Stack
-- **Framework**: Astro or Next.js (evaluate trade-offs between SSG performance and dynamic needs).
-- **Styling**: Tailwind CSS for rapid iteration or a component library if productivity benefits outweigh added weight.
-- **Content**: Markdown/MDX for blog posts and certifications; JSON/MD for project metadata.
-- **Hosting**: GitHub Pages, Netlify, or Vercel; choose based on desired custom domain and build-time features.
+## Content Map
+Browse from the repo root to specific content items. Use the links below to drill down, then follow the “Back to top” link to return here.
 
-## Repository Structure
-```
-docs/                    → Planning, architecture notes, and meeting logs
-content/
-  blog/                  → Blog posts (Markdown/MDX)
-  certifications/        → Credential descriptions and metadata
-src/
-  components/            → Reusable UI components
-  pages/                 → Page-level entry points (framework dependent)
-public/                  → Static assets (favicons, images, robots.txt)
-public/styles/           → Global stylesheets and fonts
-scripts/                 → Utility scripts (data transforms, build helpers)
-```
+### Hugo Content (`content/`)
+- [Blog](content/blog/) — Long-form posts and thought leadership.
+  - [Test Blog 1](content/blog/Test%20Blog%201.md)
+- [Journal](content/journal/) — Daily notes and reflections.
+  - [Test Journal](content/journal/Test%20Journal.md)
+- [Projects](content/projects/) — Highlighted work with supporting links.
+  - [Test Links to Project](content/projects/Test%20Links%20to%20Project.md)
+- [Certifications](content/certifications/) — Credential metadata and artifacts.
+  - [Test Google Cert](content/certifications/Test%20Google%20Cert.md)
+  - [Google Advanced Data Analytics Capstone (PDF)](content/certifications/Google%20Advanced%20Data%20Analytics%20Capstone.pdf)
 
-## Near-Term Tasks
-- Finalize framework choice (Astro vs. Next.js).
-- Define content schema for projects, certifications, and blog entries.
-- Set up base layout, typography, and theming strategy.
-- Draft first round of content (bio, three core projects, two certifications, one blog post outline).
-- Configure GitHub Actions workflow for linting and deploy previews.
+[Back to top](#top)
 
-## Documentation
-Additional planning details live in `docs/roadmap.md` and will evolve with the project.
+### Site Assets & Layout
+- [layouts/](layouts/) — Hugo templates, partials, and list/single views.
+- [static/](static/) — Static files served as-is (images, downloads).
+- [assets/](assets/) — Pipeline-managed assets (CSS, JS, images).
+- [themes/](themes/) — Third-party or custom Hugo themes (if used).
+
+[Back to top](#top)
+
+### Configuration & Build
+- [hugo.toml](hugo.toml) — Global Hugo configuration and menu definitions.
+- [archetypes/](archetypes/) — Content archetypes for new pages/posts.
+- [i18n/](i18n/) — Localization files.
+- [public/](public/) — Generated site output (excluded from commits in production).
+
+[Back to top](#top)
+
+### Documentation (`docs/`)
+- [System Plan](docs/system-plan.md) — Obsidian ↔ Hugo automation and layout blueprint.
+- [Roadmap](docs/roadmap.md) — Milestone-based delivery plan.
+
+[Back to top](#top)
+
+## Docs & Automation
+- **Obsidian Templates** → Define front matter for blog, journal, projects, and certifications (see `docs/system-plan.md`).
+- **Sync Script** → Copy or link Obsidian vault folders into Hugo `content/`.
+- **CI/CD** → GitHub Actions handles linting, Hugo builds, and deployment to the chosen host.
+- **Quality Gates** → Markdown linting, front matter validation, and link checking guard content health.
+
+[Back to top](#top)
+
+## Workflow
+1. Draft or update notes inside the Obsidian vault.
+2. Run the local sync command so Hugo `content/` mirrors the vault.
+3. Preview locally with `hugo server` to confirm layout.
+4. Commit and push; GitHub Actions builds and publishes the site automatically.
+
+[Back to top](#top)
