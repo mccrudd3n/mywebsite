@@ -1,3 +1,29 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://lostuser.github.io/mywebsite/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My Website'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 10
+
+  [[menu.main]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+
+  [[menu.main]]
+    name = 'Certifications'
+    url = '/certifications/'
+    weight = 30
+
+  [[menu.main]]
+    name = 'Blog'
+    url = '/blog/'
+    weight = 40
+
+  [[menu.main]]
+    name = 'Journal'
+    url = '/journal/'
+    weight = 50

@@ -1,0 +1,58 @@
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p>{{ . }}</p>
+    {{ end }}
+    {{ with .Content }}
+      {{ . }}
+    {{ end }}
+  </header>
+
+  {{ $sections := .Site.Sections }}
+  {{ if $sections }}
+    {{ range $section := $sections }}
+      <section>
+        <h2>
+          <a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a>
+        </h2>
+        {{ with $section.Params.summary }}
+          <p>{{ . }}</p>
+        {{ else }}
+          {{ with $section.Content }}
+            <p>{{ . | plainify | truncate 200 }}</p>
+          {{ end }}
+        {{ end }}
+        {{ $pages := $section.RegularPages.ByDate.Reverse }}
+        {{ if gt (len $pages) 0 }}
+          <ul>
+            {{ range first 3 $pages }}
+              <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ with .PublishDate }}
+                  <small>· {{ .Format "02 Jan 2006" }}</small>
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ else }}
+          {{ $sectionName := "" }}
+          {{ if ne $section.Section "" }}
+            {{ $sectionName = $section.Section }}
+          {{ else }}
+            {{ $sectionName = $section.Title | urlize }}
+          {{ end }}
+          <p>
+            <em>
+              No entries yet. Add Markdown files under
+              <code>content/{{ $sectionName }}/</code>.
+            </em>
+          </p>
+        {{ end }}
+        <p class="back-link"><a href="#top">Back to top</a></p>
+      </section>
+    {{ end }}
+  {{ else }}
+    <p>No sections found. Add directories under <code>content/</code> to populate the homepage.</p>
+  {{ end }}
+{{ end }}
