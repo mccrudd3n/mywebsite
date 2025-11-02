@@ -1,6 +1,12 @@
-baseURL = 'https://lostuser.github.io/mywebsite/'
+baseURL = 'https://github.com/mccrudd3n/mywebsite'
 languageCode = 'en-us'
 title = 'My Website'
+
+[params]
+  profileName = 'John McCrudden'
+  profileTagline = 'Run after your obsessions with everything you have; Just be sure to take notes along the way"'
+  profilePhoto = 'images/profile-placeholder.svg'
+  profileLinkedIn = 'https://www.linkedin.com/in/'
 
 [caches]
   [caches.images]
@@ -31,3 +37,8 @@ title = 'My Website'
     name = 'Journal'
     url = '/journal/'
     weight = 50
+
+  [[menu.main]]
+    name = 'Links'
+    url = '/links/'
+    weight = 60

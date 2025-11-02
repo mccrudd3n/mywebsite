@@ -15,97 +15,167 @@
     <style>
       :root {
         color-scheme: light dark;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --sidebar-bg: #f1f1ed;
+        --sidebar-border: #dcd7ca;
+        --content-bg: #ffffff;
+        --content-dark: #111827;
+        --accent: #1d4ed8;
+        --accent-muted: #93c5fd;
+      }
+      * {
+        box-sizing: border-box;
       }
       body {
         margin: 0;
-        background: var(--bg, #f6f6f6);
-        color: var(--fg, #1a1a1a);
-        line-height: 1.6;
+        background: #f8f7f3;
+        color: var(--content-dark);
+        line-height: 1.7;
       }
       a {
-        color: #3262d0;
+        color: var(--accent);
         text-decoration: none;
       }
       a:hover,
-      a:focus {
+      a:focus-visible {
         text-decoration: underline;
       }
-      .site-wrapper {
-        max-width: 70rem;
-        margin: 0 auto;
-        padding: 0 1.5rem 3rem;
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 320px) 1fr;
+        min-height: 100vh;
       }
-      header {
-        background: #111827;
-        color: #f9fafb;
-      }
-      header .site-wrapper {
+      aside.sidebar {
+        background: var(--sidebar-bg);
+        border-right: 1px solid var(--sidebar-border);
+        padding: 2.5rem 2rem;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: sticky;
+        top: 0;
+        height: 100vh;
       }
-      .brand {
-        font-weight: 700;
-        font-size: 1.25rem;
-        margin-right: 1rem;
-        color: inherit;
+      .profile {
+        text-align: center;
       }
-      nav ul {
-        display: flex;
-        gap: 1rem;
+      .profile img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--accent-muted);
+        background: #e0e7ff;
+      }
+      .profile h1 {
+        font-size: 1.4rem;
+        margin: 1rem 0 0.5rem;
+      }
+      .profile p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #4b5563;
+      }
+      nav.primary {
+        flex: 1;
+      }
+      nav.primary h2 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 0 0 0.75rem;
+        color: #6b7280;
+      }
+      nav.primary ul {
         list-style: none;
         margin: 0;
         padding: 0;
+        display: grid;
+        gap: 0.6rem;
       }
-      nav a {
+      nav.primary a {
+        font-weight: 600;
         color: inherit;
-        font-weight: 500;
       }
-      main.site-wrapper {
-        padding-top: 2.5rem;
-      }
-      footer {
-        background: #111827;
-        color: #f9fafb;
-        padding: 1.5rem 0;
-      }
-      footer p {
-        margin: 0;
-        text-align: center;
+      .sidebar .external-links {
+        border-top: 1px solid var(--sidebar-border);
+        padding-top: 1rem;
+        display: grid;
+        gap: 0.4rem;
         font-size: 0.9rem;
       }
-      .back-link {
-        margin-top: 2rem;
+      main#top {
+        padding: 3rem clamp(1.5rem, 2.5vw, 3rem);
+        background: var(--content-bg);
       }
-      @media (max-width: 640px) {
-        header .site-wrapper {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.75rem;
+      .content-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .content-inner > h1:first-child {
+        font-size: 2.2rem;
+        margin-top: 0;
+      }
+      footer.site-footer {
+        margin-top: 4rem;
+        padding: 2rem 0 0;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.95rem;
+        color: #4b5563;
+      }
+      .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      .footer-nav a {
+        color: inherit;
+      }
+      .footer-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      @media (max-width: 960px) {
+        .layout {
+          grid-template-columns: 1fr;
         }
-        nav ul {
-          flex-wrap: wrap;
-          gap: 0.75rem;
+        aside.sidebar {
+          position: static;
+          height: auto;
+          align-items: center;
+          text-align: center;
+        }
+        nav.primary ul {
+          justify-items: center;
+        }
+        main#top {
+          padding-top: 1.5rem;
         }
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="site-wrapper">
-        <a class="brand" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
-        <nav aria-label="Primary navigation">
+    <div class="layout">
+      <aside class="sidebar">
+        {{ $profilePath := .Site.Params.profilePhoto | default "images/profile-placeholder.svg" }}
+        {{ $profileName := .Site.Params.profileName | default .Site.Title }}
+        {{ $profileTagline := .Site.Params.profileTagline | default "Building, learning, and sharing progress in public." }}
+        {{ $linkedin := .Site.Params.profileLinkedIn | default "https://www.linkedin.com/in/your-handle" }}
+        <div class="profile">
+          <img src="{{ $profilePath | relURL }}" alt="{{ $profileName }}" />
+          <h1>{{ $profileName }}</h1>
+          <p>{{ $profileTagline }}</p>
+        </div>
+        <nav class="primary" aria-label="Primary navigation">
+          <h2>Navigate</h2>
           <ul>
             {{- $menu := .Site.Menus.main -}}
             {{- if $menu -}}
               {{- range $menu }}
-                <li>
-                  <a href="{{ .URL | relURL }}">{{ .Name }}</a>
-                </li>
+                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
               {{- end -}}
             {{- else -}}
               {{- range .Site.Sections }}
@@ -114,18 +184,32 @@
             {{- end -}}
           </ul>
         </nav>
-      </div>
-    </header>
-    <main id="top" class="site-wrapper">
-      {{ block "main" . }}{{ end }}
-    </main>
-    <footer>
-      <div class="site-wrapper">
-        <p>
-          © {{ now.Format "2006" }} {{ .Site.Title }} ·
-          <a href="{{ "/" | relURL }}">Back to Home</a>
-        </p>
-      </div>
-    </footer>
+        <div class="external-links">
+          <strong>Quick Links</strong>
+          <a href="{{ $linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="{{ "/links/" | relURL }}">More links &amp; resources →</a>
+        </div>
+      </aside>
+      <main id="top">
+        <div class="content-inner">
+          {{ block "main" . }}{{ end }}
+          <footer class="site-footer">
+            <div class="footer-nav">
+              {{- $menu := .Site.Menus.main -}}
+              {{- if $menu -}}
+                {{- range $menu }}
+                  <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                {{- end -}}
+              {{- end -}}
+            </div>
+            <div class="footer-meta">
+              <span>© {{ now.Format "2006" }} {{ .Site.Title }}</span>
+              <span>·</span>
+              <a href="{{ "/" | relURL }}">Back to Home</a>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
