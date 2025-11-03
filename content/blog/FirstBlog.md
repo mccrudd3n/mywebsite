@@ -8,7 +8,7 @@ series:
   name: "Building in Public"
   part: 1
 cover:
-  image: "/images/blog/02112025.jpg"
+  image: "images/blog/02112025.jpg"
   alt: "VS Code with Git integration and Hugo site preview"
   caption: "Simple Git workflow: edit, commit, push — done."
   credit: "Credit to ChuckNetwork"
@@ -36,4 +36,3 @@ In saying that I have made it very simple. Git syncing with my VScode. Git push,
 Quick and Simple. 
 
 P.S This isnt ment to be perfect nor it is ment to be.
-

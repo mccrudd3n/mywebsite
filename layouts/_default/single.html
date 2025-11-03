@@ -9,9 +9,12 @@
       </p>
       <div class="article-hero">
         {{ with .Params.cover.image }}
-          <div class="cover-media">
-            <img src="{{ . | relLangURL }}" alt="{{ $.Params.cover.alt | default $.Title }}" />
-          </div>
+          {{ $resolved := partial "helpers/resolve-src.html" (dict "page" $ "src" .) }}
+          {{ with $resolved }}
+            <div class="cover-media">
+              <img src="{{ . }}" alt="{{ $.Params.cover.alt | default $.Title }}" />
+            </div>
+          {{ end }}
         {{ end }}
         <div class="cover-text">
           <h1>{{ .Title }}</h1>
