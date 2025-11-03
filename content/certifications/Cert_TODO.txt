@@ -1,0 +1,18 @@
+This needs to be organised in an easier way.
+
+--Main page with all the certificate which is block by block to lead the user into the page they want more information for each certificate
+
+Main Cert Homepage
+overview
+Block/Sector Cert
+--Cert 1
+---Cert 1 information
+--Cert n
+---Cert n Information 
+Block Sector Cert n
+--Cert 2
+---Cert 2 information
+--Cert n
+---Cert n Information 
+
+This will provide a nice and simple way to have a cert home page, blocked by the types of certs and information when entered into it.

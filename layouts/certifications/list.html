@@ -1,0 +1,148 @@
+{{ define "main" }}
+  <article class="cert-index">
+    <header class="cert-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}
+        <div class="intro">
+          {{ . }}
+        </div>
+      {{ end }}
+    </header>
+    {{ $pages := .Pages }}
+    {{ $grouped := dict }}
+    {{ $order := slice }}
+    {{ range $pages }}
+      {{ $category := .Params.cert.category | default "Other Certifications" }}
+      {{ $existing := index $grouped $category }}
+      {{ if $existing }}
+        {{ $existing = append $existing . }}
+      {{ else }}
+        {{ $existing = slice . }}
+        {{ $order = $order | append $category }}
+      {{ end }}
+      {{ $grouped = merge $grouped (dict $category $existing) }}
+    {{ end }}
+    {{ $order = sort $order }}
+    {{ if gt (len $order) 0 }}
+      <div class="cert-groups">
+        {{ range $order }}
+          {{ $category := . }}
+          {{ $pagesInGroup := index $grouped $category }}
+          {{ $sorted := sort $pagesInGroup "Date" "desc" }}
+          {{ $anchor := $category | default "Other Certifications" | anchorize }}
+          <section class="cert-group" id="{{ $anchor }}">
+            <header>
+              <h2>{{ $category }}</h2>
+              {{ $scratch := newScratch }}
+              {{ range $sorted }}
+                {{ if not ($scratch.Get "summary") }}
+                  {{ with .Params.cert.categorySummary }}
+                    {{ $scratch.Set "summary" . }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+              {{ with $scratch.Get "summary" }}
+                <p>{{ . }}</p>
+              {{ end }}
+            </header>
+            <ul class="cert-cards">
+              {{ range $sorted }}
+                <li>
+                  <article>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    {{ with .Params.cert.issuer }}
+                      <p class="issuer">{{ . }}</p>
+                    {{ end }}
+                    {{ with .Params.cert.awarded }}
+                      <p class="awarded">Awarded {{ . }}</p>
+                    {{ else }}
+                      {{ with .Date }}
+                        <p class="awarded">Awarded {{ .Format "02 Jan 2006" }}</p>
+                      {{ end }}
+                    {{ end }}
+                    {{ with .Params.description }}
+                      <p class="description">{{ . }}</p>
+                    {{ end }}
+                    <p class="more"><a href="{{ .RelPermalink }}">View certificate →</a></p>
+                  </article>
+                </li>
+              {{ end }}
+            </ul>
+          </section>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p><em>No certifications published yet. Add Markdown files under <code>content/certifications/</code>.</em></p>
+    {{ end }}
+  </article>
+  <style>
+    .cert-index {
+      display: grid;
+      gap: 2.5rem;
+    }
+    .cert-header .intro {
+      font-size: 1rem;
+      color: #4b5563;
+      display: grid;
+      gap: 1rem;
+    }
+    .cert-groups {
+      display: grid;
+      gap: 2rem;
+    }
+    .cert-group header h2 {
+      margin-bottom: 0.25rem;
+    }
+    .cert-group header p {
+      margin-top: 0;
+      color: #6b7280;
+    }
+    .cert-cards {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 1.5rem;
+    }
+    .cert-cards li article {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      background: #ffffff;
+      display: grid;
+      gap: 0.4rem;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+    }
+    .cert-cards li h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .cert-cards .issuer {
+      font-weight: 600;
+      margin: 0;
+    }
+    .cert-cards .awarded {
+      margin: 0;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    .cert-cards .description {
+      margin: 0;
+      color: #4b5563;
+    }
+    .cert-cards .more {
+      margin: 0;
+    }
+    .cert-cards .more a {
+      font-weight: 600;
+    }
+    @media (max-width: 720px) {
+      .cert-cards {
+        gap: 1rem;
+      }
+      .cert-cards li article {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+{{ end }}

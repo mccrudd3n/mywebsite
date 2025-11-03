@@ -8,14 +8,17 @@ series:
   name: "Cert Collection"
   part: 1
 cover:
-  image: "/images/certifications/cert.jpg"  # Optional: Icon or thumbnail
+  image: "images/certifications/cert.jpg"  # Optional: Icon or thumbnail
   alt: "Certificate badge"
   caption: "Earned November 2025"
   credit: "Google"
 toc: true
 featured: false
 cert:  # Custom: For a /certifications/ page
+  category: "Data & Analytics"
+  categorySummary: "Data storytelling, BI dashboards, and analytics-focused credentials."
   issuer: "Google"
+  awarded: "November 2025"
   link: "https://drive.google.com/file/d/1OtUA4ZdD5v2-Y2HD0MwwgRM9aJ0lSKRG/view?usp=sharing"
 
 ---

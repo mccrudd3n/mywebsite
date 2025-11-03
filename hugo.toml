@@ -7,6 +7,8 @@ title = 'Home'
   profileTagline = 'Running after my obsessions with everything I have; whilst taking notes. Do mind my spelling'
   profilePhoto = 'images/profile-placeholder.svg'
   profileLinkedIn = 'https://www.linkedin.com/in/'
+  profileGitHub = 'https://github.com/mccrudd3n'
+  profileEmail = 'john@example.com'
 
 [caches]
   [caches.images]
@@ -37,8 +39,3 @@ title = 'Home'
     name = 'Journal'
     url = '/journal/'
     weight = 50
-
-  [[menu.main]]
-    name = 'Links'
-    url = '/links/'
-    weight = 60
