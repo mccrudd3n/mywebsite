@@ -1,12 +1,17 @@
 ---
-title: "Certifications"
-summary: "Snapshot of coursework, exams, and credentials grouped by their focus areas."
+title: "🥇Certifications"
+summary: "Forever Learning - 184 Squadron"
 description: "Browse credentials by domain, then drill into each certificate for highlights, evidence, and next steps."
 type: "certifications"
 ---
 
-## Overview
+## *Forever Learning - 184 Sqn*
+A motto etched into my core as an Air Cadet.
+The more I learn, the deeper I value it.
 
-I’ve organised my credentials into focus areas so you can jump straight to the skills that matter most—cloud, analytics, leadership, and more. Each card links to a dedicated page with the story behind the badge, proof of completion, and the impact on my work.
+Education comes from the Latin root word **Educo** which derived from the combinations of *ex-* [out of] and *ducere* [to lead or guide], conveying the sense of *"To Lead out"* or *"To Draw Forth"*. This reflects the idea of education as the process of **drawing out knowledge from within a person**.  
 
-Use the section headings below to skim by domain, or head directly to a certificate if you already know what you’re looking for.
+This page is a reflection of that belief.
+Each certification I’ve earned isn’t a trophy, but a checkpoint on a self-driven journey; signposts along a road powered by curiosity. They don’t define the destination; they illuminate the path.
+
+My studies—spanning Science and Engineering, Project Management, Business, and beyond—may seem scattered across disciplines. But look closer, and you’ll find a single thread running through them all: a restless curiosity that connects and strengthens every skill, proving that with purpose and persistence, even the most diverse fields can move in harmony.

@@ -76,8 +76,9 @@ This document outlines how to automate content publishing with Obsidian and Hugo
   - Front matter: `title`, `subtitle`, `date`, `tech_stack`, `role`, `outcome`, `links`.
   - Layout: hero image, summary, problem/solution sections, metrics, call-to-action.
 - **Certifications**
-  - Front matter: `title`, `description`, `date`, plus a nested `cert` map that stores `category`, `categorySummary` (optional, once per category), `issuer`, `awarded`, and a `link` to primary evidence.
-  - Layout: grouped blocks per `cert.category`, each presenting cards with issuer, award date, and a link into the detailed certificate page.
+  - Organise into sub-folders (e.g., `data-analysis/`, `cloud-computing/`) with each `_index.md` giving a short description of that domain.
+  - Individual certificate pages carry front matter: `title`, `description`, `date`, plus a nested `cert` map containing `issuer`, `awarded`, optional `credential_id`, `link`, and `skills`.
+  - The section homepage renders each subsection as a block, highlighting the two latest credentials with a “View all” link into that category.
 - **Blog**
   - Standard article layout; include estimated read time, related posts, social share preview.
 - **Journal**
@@ -103,9 +104,9 @@ This document outlines how to automate content publishing with Obsidian and Hugo
 - Detail pages containing chronology, problem, approach, outcomes, media gallery, and GitHub links.
 
 ### 3.3 Certifications Page
-- Group credentials into domain blocks (Data & Analytics, Cloud, Leadership, etc.) with headings anchored for quick jumps.
-- Inside each block, render cards showing issuer, award date, short description, and a call-to-action that opens the detailed certificate page.
-- Pull optional block summary copy from `cert.categorySummary` so visitors know what to expect in each cluster.
+- Display a grid of category blocks (sourced from subsection `_index.md` files) complete with short summaries and the two most recent certs per block.
+- Include a clear “View all” call-to-action for each block that routes to the category list, plus issuer/award metadata for quick scanning.
+- Ensure blocks respond on mobile (single column) and surface section anchors for deep linking.
 
 ### 3.4 Blog Page
 - Highlight featured posts.

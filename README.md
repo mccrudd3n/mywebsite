@@ -25,8 +25,9 @@ Assuming GitHub Pages deployment at `https://lostuser.github.io/mywebsite/`, the
 - Projects → `/projects/` &nbsp;(`content/projects/`)
   - Sample: [Test Links to Project](content/projects/Test%20Links%20to%20Project.md)
 - Certifications → `/certifications/` &nbsp;(`content/certifications/`)
-  - Credentials are grouped by `cert.category` so the index reads as domain-specific blocks (e.g., Data & Analytics, Cloud).
-  - Sample: [Google Advanced Data Analytics Capstone](content/certifications/Google_Adv_data_Analysis.md)
+  - Organised into sub-folders such as `data-analysis/`, `cloud-computing/`, `ux-design/`, and `python-automation/`.
+  - The homepage surfaces each category as a block with the two most recent credentials and a direct "View all" link.
+  - Sample: [Google Advanced Data Analytics Capstone](content/certifications/data-analysis/google-advanced-data-analytics.md)
 - Blog → `/blog/` &nbsp;(`content/blog/`)
   - Sample: [Test Blog 1](content/blog/Test%20Blog%201.md)
 - Journal → `/journal/` &nbsp;(`content/journal/`)

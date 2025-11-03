@@ -1,5 +1,5 @@
 ---
-title: "The Setup"
+title: "The Setup - placeholder"
 description: "My very first (but not first) blog — launching my public portfolio"
 date: 2025-11-02
 draft: false

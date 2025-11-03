@@ -42,7 +42,7 @@
 
   {{ $sectionConfigs := slice
       (dict "key" "projects" "title" "Projects" "description" "Work-in-progress builds.")
-      (dict "key" "certifications" "title" "Certifications" "description" "Forever Learning - Credit to 184.")
+      (dict "key" "certifications" "title" "Certifications" "description" "Forever Learning.")
       (dict "key" "blog" "title" "Blog" "description" "Long-form writing, explainers, and deep dives.")
       (dict "key" "journal" "title" "Journal" "description" "Day-to-day notes, reflections, and learning logs.")
   }}
@@ -58,19 +58,19 @@
             </h2>
             <p>{{ with $sectionPage.Params.summary }}{{ . }}{{ else }}{{ .description }}{{ end }}</p>
           </header>
-          {{ $entries := $sectionPage.RegularPages.ByDate.Reverse }}
-          {{ if gt (len $entries) 0 }}
-            <ul>
-              {{ range first 3 $entries }}
-                {{ $entryDate := default .PublishDate .Date }}
-                <li>
-                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                  {{ with $entryDate }}<small> · {{ .Format "02 Jan 2006" }}</small>{{ end }}
-                </li>
-              {{ end }}
-            </ul>
-          {{ else }}
-            <p><em>No entries yet. Add Markdown files under <code>content/{{ .key }}/</code>.</em></p>
+          {{ $entries := $sectionPage.RegularPagesRecursive.ByDate.Reverse }}
+          {{ if ne .key "certifications" }}
+            {{ if gt (len $entries) 0 }}
+              <ul>
+                {{ range first 3 $entries }}
+                  {{ $entryDate := default .PublishDate .Date }}
+                  <li>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    {{ with $entryDate }}<small> · {{ .Format "02 Jan 2006" }}</small>{{ end }}
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
           {{ end }}
         </article>
       {{ end }}

@@ -1,69 +1,40 @@
 ---
-title: "Google Advanced Data Analytics Capstone"
-description: "my latest credential"
-date: 2025-11-02
+title: "Credential Title"
+description: "Why this certification matters."
+date: 2025-01-01
 draft: false
-tags: ["certifications", "data-analytics", "google"]
-series:
-  name: "Cert Collection"
-  part: 1
 cover:
-  image: "images/certifications/cert.jpg"  # Optional: Icon or thumbnail
+  image: "images/certifications/cert.jpg"
   alt: "Certificate badge"
-  caption: "Earned November 2025"
-  credit: "Google"
 toc: true
 featured: false
-cert:  # Custom: For a /certifications/ page
-  category: "Data & Analytics"  # Used to group cards on the certifications index
-  categorySummary: "Data storytelling, BI dashboards, and analytics-focused credentials."  # Optional: set once per category to add block intro copy
-  issuer: "Google"
-  awarded: "November 2025"
-  link: "https://drive.google.com/file/d/1OtUA4ZdD5v2-Y2HD0MwwgRM9aJ0lSKRG/view?usp=sharing"
+cert:
+  issuer: "Issuer Name"
+  awarded: "January 2025"
+  credential_id: "ABC-123"
+  link: "https://example.com/verify"
+  skills:
+    - Skill one
+    - Skill two
+    - Skill three
 
 ---
 
-## TL;DR
-
-> Earned my Google Advanced Data Analytics Capstone — turning data into decisions.
-
-## Key Takeaways
-
-- Mastered Python, SQL, and Tableau for real-world analytics.
-- Completed a capstone project analyzing customer churn.
-- Ready to apply these skills in my next role.
-
 ## Introduction
 
-Certificates aren't just paper — they're proof of growth. This one from Google capped off 6 months of diving deep into data science fundamentals.
+Set the stage for why this certification was worth pursuing and what you focused on.
 
-<!-- Why I pursued it: To bridge my engineering background with analytics. -->
+## Highlights
 
-## Certification Details
+- Impact bullet or short paragraph.
+- Another highlight that ties back to your work.
+- Optional data point or outcome.
 
-Issued by **Google** on November 2, 2025.  
-Covers: Advanced SQL queries, data visualization, machine learning basics.
+## Evidence
 
-**[Download PDF Certificate](https://drive.google.com/file/d/1OtUA4ZdD5v2-Y2HD0MwwgRM9aJ0lSKRG/view?usp=sharing)**  
-*(Direct link, opens in new tab for download.)*
+- Link to artefacts, reports, or repositories.
+- Screenshots or embeds if helpful.
 
-<!-- Optional embed preview (if you want inline viewing): -->
-<iframe src="https://drive.google.com/file/d/1OtUA4ZdD5v2-Y2HD0MwwgRM9aJ0lSKRG/view?usp=sharing" width="100%" height="600" style="border:1px solid #ccc;"></iframe>
+## Next Steps
 
-## Main Content
-
-### What I Learned
-
-- Bullet-point skills or highlights.
-
-### Next Steps
-
-How this fits into my portfolio.
-
-## Conclusion
-
-One cert down, endless learning ahead. Share yours in the comments!
-
-## Further Reading
-
-- [Google Data Analytics Certificate](https://www.coursera.org/professional-certificates/google-data-analytics) — The full program.
+How this credential feeds into upcoming work, experiments, or learning goals.
