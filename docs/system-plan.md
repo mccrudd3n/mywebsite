@@ -27,6 +27,9 @@ This document outlines how to automate content publishing with Obsidian and Hugo
   ---
   ```
 - Optional: install **Obsidian Git** to auto-commit note changes, and **Obsidian Hugo** or a custom snippet to ensure Hugo-compatible formatting (wikilinks → standard Markdown).
+- Media handling:
+  - Store shared assets in `static/images/` and embed them with the `staticimg` shortcode (`{{< staticimg src="images/example.png" alt="Describe the image" >}}`) so GitHub Pages adds the site subpath automatically.
+  - When a post needs local assets, convert it to a page bundle (`content/blog/post-name/index.md`) and reference files via standard Markdown (`![Alt text](cover.jpg)`); the custom render hook rewrites those URLs for you.
 
 ### 1.2 Syncing to the Repo
 - Use a one-way sync script or symbolic link:

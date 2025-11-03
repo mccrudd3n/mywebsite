@@ -61,6 +61,10 @@ hugo.toml                → Hugo configuration and menu definitions
 3. Preview locally with `hugo server` to confirm navigation and linking.
 4. Commit and push; GitHub Actions handles the production build and deployment.
 
+### Image Embeds
+- Store shared assets under `static/images/` and include them with `{{< staticimg src="images/example.png" alt="Descriptive alt text" >}}`; the shortcode adds the correct `/mywebsite/` prefix for GitHub Pages.
+- Alternatively, use page bundles (`content/blog/my-post/index.md` + image files) and reference them with standard Markdown (`![Alt text](cover.jpg)`). The custom image render hook resolves bundle assets automatically.
+
 ### Documentation
 - [System Plan](docs/system-plan.md) — Obsidian ↔ Hugo automation, layout details, and maintenance cadence.
 - [Roadmap](docs/roadmap.md) — Milestones for content, design polish, and automation.

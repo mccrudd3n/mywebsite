@@ -36,7 +36,7 @@ featured: true
 
 ### Section 2
 
-<!-- Drop images like: ![alt text](/images/blog/filename.png) -->
+<!-- Embed static assets with the shortcode: {{< staticimg src="images/blog/example.png" alt="Describe the image" >}} -->
 
 ## Conclusion
 
