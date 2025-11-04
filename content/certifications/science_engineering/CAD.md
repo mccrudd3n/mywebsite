@@ -1,23 +1,31 @@
 ---
-title: "CAD"
-date: 2024-06-20
+title: "Computer Aided Design"
+date: 2013-02-01
 draft: false
-description: "Validated cloud foundations across AWS services, security, and billing."
+description: "Computer Aided Design Extra Collage Night Courses"
 cert:
-  issuer: "UHI"
-  awarded: "June 2024"
-  credential_id: "AWS-CCP-7890"
+  issuer: "City & Guilds"
+  awarded: "Febuary 2013"
   link: "https://aws.amazon.com/verification"
   skills:
-    - Cloud Architecture Basics
-    - Shared Responsibility Model
-    - Cost Optimization
+    - Computer Aided Design
+    - Computer Aided Manufacturing 
 cover:
   image: "images/certifications/cert.jpg"
   alt: "Certificate badge"
 featured: false
 ---
 
-Grounded in AWS global infrastructure, foundational architecture patterns, and how to manage billing/governance at scale.
+## Self Reflection
 
-**[Verify on AWS](https://example.com/verify)**
+Engineering, this isnt just a hobby, its a lifestyle, its a mindset! 
+From Lego to Aircrafts that must say something! 
+
+Course taken at night - just because I can 
+
+[Advanced CAD Using AutoCAD (Level 3) 02/2013](https://drive.google.com/file/d/1CfDu51COUU3QoyEOreo4D_jYh7_e5PHD/view?usp=sharing)
+
+[2D Computer Aided Design and Manufacturing 09/2012](https://drive.google.com/file/d/15nmfQJkbbLrOv43kXTc7cLy5oJI4EDQJ/view?usp=sharing)
+
+[2D Computer Aided Design 09/2012](https://drive.google.com/file/d/1nIdZOHQZYJK5ofzBdTINmb-zjk56AiH8/view?usp=sharing)
+

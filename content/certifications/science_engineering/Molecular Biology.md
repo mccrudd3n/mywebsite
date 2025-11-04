@@ -1,23 +1,22 @@
 ---
 title: "Molecular Biology"
-date: 2024-06-20
+date: 2020-04-26
 draft: false
-description: "Validated cloud foundations across AWS services, security, and billing."
+description: "Division of Laboratory Systems Centers for Disease Control and Prevention"
 cert:
-  issuer: "UHI"
-  awarded: "June 2024"
-  credential_id: "AWS-CCP-7890"
+  issuer: "Centers for Disease Control and Prevention"
+  awarded: "April 2020"
   link: "https://aws.amazon.com/verification"
   skills:
-    - Cloud Architecture Basics
-    - Shared Responsibility Model
-    - Cost Optimization
+    - Basic Molecular
+    - PCR
+    - 
 cover:
   image: "images/certifications/cert.jpg"
   alt: "Certificate badge"
 featured: false
 ---
 
-Grounded in AWS global infrastructure, foundational architecture patterns, and how to manage billing/governance at scale.
 
-**[Verify on AWS](https://example.com/verify)**
+
+**[Basic Molecular Biology Module 4: PCR and Real-Time PCR](https://example.com/verify)**
