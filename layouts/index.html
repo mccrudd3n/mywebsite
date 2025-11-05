@@ -28,7 +28,7 @@
           {{ with $timestamp }}{{ .Format "02 Jan 2006" }}{{ end }}
         </p>
         {{ with $latest.Summary }}
-          <p>{{ . | plainify | truncate 100 }}</p>
+          <p>{{ . | plainify | truncate 50 }}</p>
         {{ else }}
           {{ with $latest.Params.description }}
             <p>{{ . }}</p>

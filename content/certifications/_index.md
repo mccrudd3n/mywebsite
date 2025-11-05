@@ -4,7 +4,6 @@ summary: "Forever Learning - 184 Squadron"
 description: "Browse credentials by domain, then drill into each certificate for highlights, evidence, and next steps."
 type: "certifications"
 ---
-
 ## *Forever Learning - 184 Sqn*
 A motto etched into my core as an Air Cadet.
 The more I learn, the deeper I value it.

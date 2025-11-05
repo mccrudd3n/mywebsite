@@ -1,36 +1,75 @@
 ---
-title: "Aircraft Engineering and Design"
+title: "Aircraft Engineering & Design"
 date: 2017-07-30
 draft: false
-description: "In-depth engineering knowledge across a broad range of modern aeronautical technologies"
+description: "A lifelong flight path through aeronautical engineering—from RAF Air Cadet wings at 13 to a full university degree. Hands-on workshop skills, advanced aircraft performance, design principles, and project leadership in modern aviation systems."
+tags: ["Degree", "aerospace-engineering", "aircraft-design", "aviation", "UHI", "RAF-Air-Cadets"]
 cert:
   issuer: "University of the Highlands and Islands"
   awarded: "July 2017"
-  link: "https://drive.google.com/file/d/1bg_VwFdFgxYrdD2967VQjhu0ki0vWSZS/view?usp=sharing"
+  link: "https://drive.google.com/drive/folders/1fqb4ClIyVEqY3sF0eidZFNWfMLbmn8ik?usp=sharing"
   skills:
-    - Practical engineering workshop skills to aviation industry standard
-    - Engineering project and project management
-    - Advanced aircraft and engine performance
-    - Advanced aircraft design
+    - Aircraft Systems & Performance Analysis
+    - Advanced Aerodynamics & Propulsion
+    - Engineering Workshop (Industry Standard)
+    - Project Management in Aviation
+    - Flight Principles & Piloting Fundamentals
+    - Structural Design & Stress Analysis
+    - Avionics & Instrumentation
+    - CAD for Aerospace (integrated)
 cover:
   image: "images/certifications/cert.jpg"
   alt: "Certificate badge"
 featured: false
 ---
-## Self Reflection
+## Born to Fly, Built to Engineer
 
-Engineering, this isnt just a hobby, its a lifestyle, its a mindset! 
-From Lego to Aircrafts that must say something! 
+*“Engineering isn’t a hobby. It’s a lifestyle. It’s a mindset. From Lego bricks to lifting bodies—this is my flight plan.”*
 
-As this page is somewhat still under maintenance, once I have sourced more of my certifiactes I will update the links below
+This **Aircraft Engineering & Design Portfolio** is **my logbook** from **age 13 in RAF Air Cadets** to earning a **BEng (Hons)** while still smelling of jet fuel! - Going to the petrol station just isn’t the same! 
 
-*University:* [Aircraft Engineering Degree 07/2017](https://drive.google.com/file/d/1RKYN-F_5Ig2VFT7JUGOU4zPByWhnkxpE/view?usp=sharing)
+I learned to **fly before I could drive** even though my nickname was *Vomit comet* and I’ve been chasing altitude in different ways ever since!
 
-*Collage:* [Source Collage certificate]
+### Age 13: RAF Air Cadets – The Launchpad
 
-*Air Training Corps:* [Aviation Study Certificate](https://drive.google.com/file/d/12hOuYSja0WUaWqVQTUi6w3DaOfS6Pp91/view?usp=sharing)
-- [Aviation Study TxSript 08/2012](https://drive.google.com/file/d/1dVyrwUsC08J1NhzH7x1COHEU3T4tN91r/view?usp=sharing)
+Joined the **Air Training Corps (RAF Air Cadets)** at 13.  
+Not for the uniform. For the **sky**. I am glad the my father one day took us to our local Squadron and join! 
 
-*Highschool:* [Engineering Diploma Certificate](https://drive.google.com/file/d/1dVyrwUsC08J1NhzH7x1COHEU3T4tN91r/view?usp=sharing)
-- [Engineering Diploma TxSript. 1 08/2011](https://drive.google.com/file/d/1oxGbYrYOyN4gW2uoV7cK-iGng0BFme4O/view?usp=sharing)
-- [Engineering Diploma TxSript. 2 08/2011](https://drive.google.com/file/d/1X6tmA2s3rTIM4HtYWYkUbdCOX5j-Q2Vw/view?usp=sharing)
+- **First flight**: Glider, Powered flight and Aerobatics at the of age 14  
+- **First attempted ghost-solo**: Powered aircraft, **age 16** — *way before my driving test* - I do have to say, due to my air-sickness, I didn’t pass my test after letting go of the control column just before touching the ground causing the aircraft to hit a hard landing and ballon bouncing on the runway along with the instructor *lightly* screaming at me...
+
+- Several ground school: **principles of flight, navigation, engines**  
+- Regular visits to **RAF bases** (Lossiemouth, Leuchars, Cranwell so many more) and **airshows** (RIAT, Farnborough)  
+- Hands-on: stripping piston engines, reading schematics, pre-flight checks  
+
+*I wasn’t just learning to fly. I was learning **why** things fly!*
+
+---
+
+### High School: Engineering Diploma
+
+Dual-track:
+- **Theory**: Mechanics, Electrics, materials,  
+- **Practice**: Wood/Metal work, Lathe work, welding, technical drawing   
+- **Transcripts**: Two years of graded projects—*designing an early warning forest fire detection system using Bluetooth/WIFI interconnected mesh network*
+
+This wasn’t extra credit. This was **proof of craft**!
+
+### University: BEng (Hons) Aircraft Engineering
+
+Some modules were:
+- **Advanced Aircraft Performance** 
+- **Aircraft Design** – wing loading, stability, control surfaces, systems integration  
+- **Propulsion Systems** – gas turbines, reciprocating engines, performance mapping  
+- **Avionics & Flight Control**
+- **Engineering Project Management**
+- **Workshop Mastery** – fabricated components to **EASA tolerances**  
+
+Graduated with **industry-ready skills** and a tool bag of skills!
+
+### Why Aircraft Engineering?
+
+It isn’t passion. It’s an obsession! 
+
+[Certificates](https://drive.google.com/drive/folders/1fqb4ClIyVEqY3sF0eidZFNWfMLbmn8ik?usp=sharing)
+

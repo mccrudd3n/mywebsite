@@ -15,12 +15,8 @@ cover:
 toc: true
 featured: true
 ---
-
-## TL;DR
->  ⚠️ Website under maintenance + Logbook below ⚠️ 
-
+My Second Brain: Site under constant construction ⚠️  
 ## Key Takeaways
-
 - Just do it
 - Perfection = Paralysis 
 - Thanks [ChuckNetwork](https://www.youtube.com/@NetworkChuck) You have supported me through your videos in more ways that you can think! 
@@ -53,6 +49,16 @@ As Journals, this format seems to be working for me. Commiting and commenting un
 
 ---
 Log 04/11/2025
+
 Steve Jobs once said - You can only connect the dots looking backwards, or something alomg those line. AS i create this second brain it came to me in such a profound way; Data is more than just numbers on the screen, it really does tell a story and if I can try and understand that story then i could potentially predict what is about to happen since I am gaining an understanding of its historic past...well thats what it seems like it.
 
 As a short note, though the log book is added at the bottom on "The Setup", in some cases im thinking of writing the latest logs from the top so that you the reader can read down than read up by scrolling up! Maybe for the next Journal once I have sorted out the basic layout of this thing. Plus i sort of want the very first log right at the top to give where created it due!
+
+---
+Log 05/11/2025
+
+My Second Brain has become a personal self reflection. Collecting certificates which I have, evaluating that certificate and how it could help my aims and object, the times when i went ghost after reading too much of one subject and finding that hope to trust the good will over come evil. 
+
+This journey - "The Setup" has been an interesting self-reflective process. 
+
+From this moment in time it seems like "The Setup" Section is done. As I gain more certificate- find my other onces to update links, I will do just that. Perfection = paralysis and I have spent the last few days in getting this up and running. Now that it is somewhat, I am wanting to get back to learning the Genomics Data Analsysis.
