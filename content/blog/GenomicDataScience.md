@@ -1,7 +1,7 @@
 ---
 title: "Reflections on Genomic Data Science"
 description: "A beginner-friendly overview of DNA sequencing basics, inspired by the Coursera Genomic Data Science specialization, plus thoughts on the moral implications of genetic editing."
-date: 2025-11-02
+date: 2025-11-16
 draft: false
 tags: ["genomics", "bioinformatics", "ethics", "DNA sequencing", "CRISPR"]
 cover:
@@ -10,7 +10,7 @@ cover:
   caption: "DNA sequencing workflow"
   credit: "Coursera; Johns Hopkins University"
 toc: true
-featured: false
+featured: true
 ---
 ## TL;DR
 
