@@ -18,7 +18,7 @@ featured: true
 
 ## TL;DR
 
-> One-sentence hook that sells the post. Replace this.
+> DNA Computing
 
 ## Key Takeaways
 
@@ -45,3 +45,6 @@ Wrap up, restate value, optional call-to-action.
 ## Further Reading
 
 - [Title](https://example.com) — short description.
+
+DNA computing is astouniding, to be able to read dna is crazy- we read parts of it, then build up the fragments into one 
+

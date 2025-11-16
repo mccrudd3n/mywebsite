@@ -5,11 +5,10 @@ draft: false
 description: "A living intersection of molecular biology, bioinformatics, and genomic data science—bridging wet-lab fundamentals with computational breeding, predictive genomics, and biostatistical modelling in poultry and beyond."
 tags: ["molecular-biology", "genomics", "bioinformatics", "data-science", "CDC", "poultry-genetics"]
 cert:
-  issuer: "Centres for Disease Control and Prevention"
+  issuer: "Centres for Disease Control and Prevention || John Hopkins University"
   awarded: "April 2020"
   link: "https://drive.google.com/drive/folders/1wMqwolu447EtUNB8QoE36ogMekRJ8-zt?usp=sharing"
   skills:
-skills:
   - PCR & Real-Time PCR (qPCR)
   - DNA/RNA Extraction & Quality Control
   - Primer Design & Assay Validation
@@ -48,7 +47,7 @@ After completing the advanced data analytics, I asked myself as well as other te
 
 And this is where I now have entered **Genomic Data Science**. Simply because: **Nobody knows but a handful of people**
 
-### In Progress: Genomic Data Science Specialization
+### Genomic Data Science Specialization
 
 Now merging **biology + code + stats**:
 - **Category: Bioinformatics** – Aligning billions of reads with BWA/GATK  
@@ -93,6 +92,6 @@ I propose a question to you: **Is the future of food grown or is it already desi
 
 We aren’t just in the coop. We are in the **code**.
 
-**[Molecular Biology Certificates](https://drive.google.com/drive/folders/1wMqwolu447EtUNB8QoE36ogMekRJ8-zt?usp=sharing)**
+**[Molecular Biology Certificates](https://drive.google.com/file/d/1e3B4nxWJo7i3M5yjrQIQP2bCoTJaD7nr/view?usp=sharing)**
 
 
